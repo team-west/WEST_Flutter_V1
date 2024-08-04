@@ -78,6 +78,7 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
                   title: "전화번호",
                   controller: phoneController,
                   focusNode: phoneFocusNode,
+                  textInputType: TextInputType.phone,
                   textInputAction: TextInputAction.done,
                 ),
                 SizedBox(height: MediaQuery.of(context).viewInsets.bottom),

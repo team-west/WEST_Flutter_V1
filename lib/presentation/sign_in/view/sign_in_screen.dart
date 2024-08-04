@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:west_flutter_v1/core/component/west_button.dart';
 import 'package:west_flutter_v1/core/component/west_text_field.dart';
 import 'package:west_flutter_v1/core/constants/west_style.dart';
@@ -75,6 +76,7 @@ class _SignInScreenState extends ConsumerState<SignInScreen> {
                   title: "비밀번호",
                   controller: pwdController,
                   focusNode: pwdFocusNode,
+                  textInputAction: TextInputAction.done,
                   password: true,
                 ),
                 SizedBox(height: MediaQuery.of(context).viewInsets.bottom),
@@ -101,10 +103,15 @@ class _SignInScreenState extends ConsumerState<SignInScreen> {
                     ),
                   ),
                   const SizedBox(width: 4),
-                  Text(
-                    "회원가입하기",
-                    style: WESTTextStyle.button2(
-                      color: WESTColor.main200,
+                  GestureDetector(
+                    onTap: () {
+                      context.push("/signUp");
+                    },
+                    child: Text(
+                      "회원가입하기",
+                      style: WESTTextStyle.button2(
+                        color: WESTColor.main200,
+                      ),
                     ),
                   ),
                 ],

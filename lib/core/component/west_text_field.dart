@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:west_flutter_v1/core/constants/west_style.dart';
 
@@ -17,6 +18,10 @@ class WESTTextField extends StatefulWidget {
 
   final TextInputAction? textInputAction;
 
+  final TextInputType? textInputType;
+
+  final TextInputFormatter? textInputFormatter;
+
   const WESTTextField({
     super.key,
     required this.title,
@@ -28,7 +33,9 @@ class WESTTextField extends StatefulWidget {
     this.password = false,
     this.autofocus = false,
     this.maxLength,
+    this.textInputFormatter,
     this.textInputAction = TextInputAction.next,
+    this.textInputType = TextInputType.text,
   });
 
   @override
@@ -64,6 +71,8 @@ class _WESTTextFieldState extends State<WESTTextField> {
             /// 페이지가 빌드 되었을 때 텍스트 필드를 포커스 되게 할 것인지
             autofocus: widget.autofocus!,
 
+            inputFormatters: widget.textInputFormatter != null ? [widget.textInputFormatter!] : [],
+
             /// cursor 스타일 설정
             cursorHeight: 16,
             cursorWidth: 1,
@@ -74,6 +83,9 @@ class _WESTTextFieldState extends State<WESTTextField> {
             /// 비밀번호 obscure 설정
             obscureText: widget.password! && !_isClicked ? true : false,
             obscuringCharacter: "⦁",
+
+            /// 키보드 입력 타입
+            keyboardType: widget.textInputType,
 
             /// content text 스타일 설정
             style: WESTTextStyle.caption2(
@@ -99,20 +111,22 @@ class _WESTTextFieldState extends State<WESTTextField> {
 
               /// suffixIcon -> 포커스 되지 않았을 때도 표시
               /// suffix -> 포커스 되었을 때만 표시
-              suffixIcon: widget.password! ? GestureDetector(
-                onTap: () {
-                  setState(() {
-                    _isClicked = !_isClicked;
-                  });
-                },
-                child: Padding(
-                  padding: const EdgeInsets.all(12),
-                  child: SvgPicture.asset(
-                    /// 중복 코드 최소화
-                    "$coreAsset/eyes${!_isClicked ? "_close" : ""}_icon.svg",
-                  ),
-                ),
-              ) : null,
+              suffixIcon: widget.password!
+                  ? GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          _isClicked = !_isClicked;
+                        });
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(12),
+                        child: SvgPicture.asset(
+                          /// 중복 코드 최소화
+                          "$coreAsset/eyes${!_isClicked ? "_close" : ""}_icon.svg",
+                        ),
+                      ),
+                    )
+                  : null,
 
               /// 텍스트 필드가 포커스 되었을 때
               focusedBorder: OutlineInputBorder(

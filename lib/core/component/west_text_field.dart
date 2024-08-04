@@ -71,6 +71,7 @@ class _WESTTextFieldState extends State<WESTTextField> {
             /// 페이지가 빌드 되었을 때 텍스트 필드를 포커스 되게 할 것인지
             autofocus: widget.autofocus!,
 
+            /// 입력 포맷팅 설정
             inputFormatters: widget.textInputFormatter != null ? [widget.textInputFormatter!] : [],
 
             /// cursor 스타일 설정

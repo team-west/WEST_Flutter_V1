@@ -11,9 +11,11 @@ class WESTTextField extends StatefulWidget {
 
   final String? hintText;
 
-  final bool? password;
+  final bool? password, autofocus;
 
   final int? maxLength;
+
+  final TextInputAction? textInputAction;
 
   const WESTTextField({
     super.key,
@@ -24,7 +26,9 @@ class WESTTextField extends StatefulWidget {
     this.height,
     this.hintText,
     this.password = false,
+    this.autofocus = false,
     this.maxLength,
+    this.textInputAction = TextInputAction.next,
   });
 
   @override
@@ -53,6 +57,12 @@ class _WESTTextFieldState extends State<WESTTextField> {
           child: TextFormField(
             controller: widget.controller,
             focusNode: widget.focusNode,
+
+            /// 텍스트 input 버튼 설정
+            textInputAction: widget.textInputAction,
+
+            /// 페이지가 빌드 되었을 때 텍스트 필드를 포커스 되게 할 것인지
+            autofocus: widget.autofocus!,
 
             /// cursor 스타일 설정
             cursorHeight: 16,

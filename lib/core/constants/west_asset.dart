@@ -1,1 +1,2 @@
-const coreAsset = "assets/icon/core";
+const iconCoreAsset = "assets/icon/core";
+const imageCoreAsset = "assets/image/core";

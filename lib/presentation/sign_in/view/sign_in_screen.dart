@@ -98,7 +98,7 @@ class _SignInScreenState extends ConsumerState<SignInScreen> {
                       ),
                       const SizedBox(width: 4),
                       SvgPicture.asset(
-                        "$coreAsset/long_ended_arrow_icon.svg",
+                        "$iconCoreAsset/long_ended_arrow_icon.svg",
                       ),
                     ],
                   ),

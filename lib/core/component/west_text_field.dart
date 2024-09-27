@@ -72,7 +72,9 @@ class _WESTTextFieldState extends State<WESTTextField> {
             autofocus: widget.autofocus!,
 
             /// 입력 포맷팅 설정
-            inputFormatters: widget.textInputFormatter != null ? [widget.textInputFormatter!] : [],
+            inputFormatters: widget.textInputFormatter != null
+                ? [widget.textInputFormatter!]
+                : [],
 
             /// cursor 스타일 설정
             cursorHeight: 16,
@@ -83,7 +85,7 @@ class _WESTTextFieldState extends State<WESTTextField> {
 
             /// 비밀번호 obscure 설정
             obscureText: widget.password! && !_isClicked ? true : false,
-            obscuringCharacter: "⦁",
+            //obscuringCharacter: "⦁",
 
             /// 키보드 입력 타입
             keyboardType: widget.textInputType,
@@ -123,7 +125,7 @@ class _WESTTextFieldState extends State<WESTTextField> {
                         padding: const EdgeInsets.all(12),
                         child: SvgPicture.asset(
                           /// 중복 코드 최소화
-                          "$coreAsset/eyes${!_isClicked ? "_close" : ""}_icon.svg",
+                          "$iconCoreAsset/eyes${!_isClicked ? "_close" : ""}_icon.svg",
                         ),
                       ),
                     )
@@ -148,8 +150,8 @@ class _WESTTextFieldState extends State<WESTTextField> {
               ),
             ),
 
-            /// 텍스트 필드가 포커스 된 상태에서 텍스트 필드를 클릭하면 포커스 해제
             onTap: () {
+              /// 텍스트 필드가 포커스 된 상태에서 텍스트 필드를 클릭하면 포커스 해제
               FocusScope.of(context).hasFocus
                   ? FocusScope.of(context).unfocus()
                   : FocusScope.of(context).hasFocus;

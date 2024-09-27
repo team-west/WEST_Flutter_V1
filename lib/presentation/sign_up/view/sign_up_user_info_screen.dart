@@ -55,7 +55,7 @@ class _SignUpScreenState extends ConsumerState<SignUpUserInfoScreen> {
   Widget build(BuildContext context) {
     final focusState = ref.watch(signInTextFieldFocusProvider);
     return WESTLayout(
-      appBar: const SignUpAppBar(count: 1),
+      appBar: const SignUpAppBar(count: 1, popRoute: "/signIn",),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: SafeArea(
         child: Padding(
@@ -85,7 +85,7 @@ class _SignUpScreenState extends ConsumerState<SignUpUserInfoScreen> {
                         ),
                         const SizedBox(width: 4),
                         SvgPicture.asset(
-                          "$coreAsset/long_ended_arrow_icon.svg",
+                          "$iconCoreAsset/long_ended_arrow_icon.svg",
                         ),
                       ],
                     ),

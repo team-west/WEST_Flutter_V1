@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:west_flutter_v1/core/component/west_button.dart';
-import 'package:west_flutter_v1/core/component/west_text_field.dart';
-import 'package:west_flutter_v1/core/constants/west_style.dart';
-import 'package:west_flutter_v1/core/layout/west_layout.dart';
-import 'package:west_flutter_v1/core/utils/number_formatter.dart';
-import 'package:west_flutter_v1/presentation/sign_in/provider/sign_in_text_field_focus_provider.dart';
-import 'package:west_flutter_v1/presentation/sign_up/widget/sign_up_app_bar.dart';
-import 'package:west_flutter_v1/presentation/sign_up/widget/sign_up_main_title_widget.dart';
-import 'package:west_flutter_v1/presentation/sign_up/widget/sign_up_routes_widget.dart';
+import 'package:west/core/component/west_button.dart';
+import 'package:west/core/component/west_text_field.dart';
+import 'package:west/core/constants/west_style.dart';
+import 'package:west/core/layout/west_layout.dart';
+import 'package:west/core/utils/number_formatter.dart';
+import 'package:west/presentation/sign_in/provider/sign_in_text_field_focus_provider.dart';
+import 'package:west/presentation/sign_up/widget/sign_up_app_bar.dart';
+import 'package:west/presentation/sign_up/widget/sign_up_main_title_widget.dart';
+import 'package:west/presentation/sign_up/widget/sign_up_routes_widget.dart';
 
 class SignUpUserInfoScreen extends ConsumerStatefulWidget {
   const SignUpUserInfoScreen({super.key});

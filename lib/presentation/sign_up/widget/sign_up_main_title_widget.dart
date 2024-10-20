@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:west_flutter_v1/core/constants/west_style.dart';
+import 'package:west/core/constants/west_style.dart';
 
 class SignUpMainTitleWidget extends StatelessWidget {
   const SignUpMainTitleWidget({super.key});

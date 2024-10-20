@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:west_flutter_v1/core/constants/west_color.dart';
-import 'package:west_flutter_v1/core/di/west_router.dart';
+import 'package:west/core/constants/west_color.dart';
+import 'package:west/core/di/west_router.dart';
 
 void main() {
   runApp(

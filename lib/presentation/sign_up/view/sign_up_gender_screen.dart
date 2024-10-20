@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:west_flutter_v1/core/component/gender_button.dart';
-import 'package:west_flutter_v1/core/component/west_button.dart';
-import 'package:west_flutter_v1/core/constants/west_style.dart';
-import 'package:west_flutter_v1/core/layout/west_layout.dart';
-import 'package:west_flutter_v1/core/provider/state/gender_type.dart';
-import 'package:west_flutter_v1/presentation/sign_up/widget/sign_up_app_bar.dart';
-import 'package:west_flutter_v1/presentation/sign_up/widget/sign_up_main_title_widget.dart';
-import 'package:west_flutter_v1/presentation/sign_up/widget/sign_up_routes_widget.dart';
+import 'package:west/core/component/gender_button.dart';
+import 'package:west/core/component/west_button.dart';
+import 'package:west/core/constants/west_style.dart';
+import 'package:west/core/layout/west_layout.dart';
+import 'package:west/core/provider/state/gender_type.dart';
+import 'package:west/presentation/sign_up/widget/sign_up_app_bar.dart';
+import 'package:west/presentation/sign_up/widget/sign_up_main_title_widget.dart';
+import 'package:west/presentation/sign_up/widget/sign_up_routes_widget.dart';
 
 class SignUpGenderScreen extends ConsumerWidget {
   const SignUpGenderScreen({super.key});

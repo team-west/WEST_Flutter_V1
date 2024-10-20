@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:west_flutter_v1/core/constants/west_style.dart';
+import 'package:west/core/constants/west_style.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

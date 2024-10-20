@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:west_flutter_v1/core/constants/west_style.dart';
-import 'package:west_flutter_v1/core/provider/gender_select_provider.dart';
-import 'package:west_flutter_v1/core/provider/state/gender_type.dart';
+import 'package:west/core/constants/west_style.dart';
+import 'package:west/core/provider/gender_select_provider.dart';
+import 'package:west/core/provider/state/gender_type.dart';
 
 class GenderButton extends ConsumerWidget {
   final String type;
